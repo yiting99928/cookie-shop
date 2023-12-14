@@ -3,11 +3,10 @@ import cartStore from "../store/cartStore.js";
 import { mapState, mapActions } from 'pinia';
 
 export default {
-    data(){
-        return {
-        }
-    },
-    template: `<div class="row row-cols-3 my-4 g-4">
+  data() {
+    return {};
+  },
+  template: `<div class="row row-cols-3 mx-auto g-4 w-75">
     <div class="col" v-for="product in sortProducts" :key="product.id">
         <div class="card">
         <img :src="product.imageUrl" class="card-img-top" alt="">
@@ -20,10 +19,10 @@ export default {
         </div>
     </div>
     </div>`,
-    computed: {
-        ...mapState(productStore,['sortProducts'])
-    },
-    methods: {
-        ...mapActions(cartStore,['addToCart'])
-    }
-}
+  computed: {
+    ...mapState(productStore, ['sortProducts']),
+  },
+  methods: {
+    ...mapActions(cartStore, ['addToCart']),
+  },
+};
