@@ -1,24 +1,25 @@
 <template>
-  <div id="app">
-    <Navbar-Component></Navbar-Component>
-    <Cart-Component></Cart-Component>
-    <Product-Component></Product-Component>
+  <div id="app" class="container">
+    <NavbarComponent></NavbarComponent>
+    <CartComponent></CartComponent>
+    <ProductComponent></ProductComponent>
   </div>
 </template>
+
 <script setup>
-  import NavbarComponent from './components/navbarComponent.js'
-  import CartComponent from './components/cartComponent.js'
-  import ProductComponent from './components/productComponent.js'
+  import NavbarComponent from './components/NavbarComponent.vue'
+  import CartComponent from './components/CartComponent.vue'
+  import ProductComponent from './components/ProductComponent.vue'
 </script>
 
-<style>
-  .card-img-top {
-    object-fit: cover;
-    height: 200px;
-  }
-  .table-image {
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
-  }
+<style >
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+.table-image {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+}
 </style>

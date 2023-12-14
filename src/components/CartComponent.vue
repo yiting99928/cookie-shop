@@ -1,8 +1,5 @@
-import cartStore from '../store/cartStore.js';
-import { mapState, mapActions } from 'pinia';
-
-export default {
-  template: `<div class="bg-light p-4 my-3">
+<template>
+  <div class="bg-light p-4 my-3">
     <div v-if="!cartList.carts.length">購物車沒有任何品項</div>
     <table v-else class="table align-middle">
         <tbody>
@@ -27,7 +24,14 @@ export default {
         </tr>
         </tfoot>
     </table>
-    </div>`,
+    </div>
+</template>
+
+<script>
+import cartStore from '../stores/cartStore.js';
+import { mapState, mapActions } from 'pinia';
+
+export default {
   computed: {
     ...mapState(cartStore, ['cartList']),
   },
@@ -35,3 +39,5 @@ export default {
     ...mapActions(cartStore, ['removeCartItem', 'setCartQty']),
   },
 };
+</script>
+

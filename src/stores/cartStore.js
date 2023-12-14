@@ -24,8 +24,8 @@ export default defineStore('cart', {
       }
     },
     setCartQty(id, e) {
-      console.log(id);
-      console.log(e.target.value);
+      // console.log(id);
+      // console.log(e.target.value);
       const currentCart = this.cart.find((item) => item.id === id);
       currentCart.qty = e.target.value * 1;
     },

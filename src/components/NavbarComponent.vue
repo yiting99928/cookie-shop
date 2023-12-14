@@ -1,8 +1,5 @@
-import { mapState } from 'pinia';
-import cartStore from '../store/cartStore.js';
-
-export default {
-  template: `<nav class="navbar bg-light">
+<template>
+    <nav class="navbar bg-light">
         <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">香香餅乾店</span>
         <button type="button" class="btn">
@@ -10,8 +7,15 @@ export default {
             <span class="badge rounded-pill bg-danger text-white">{{this.cart.length}}</span>
         </button>
         </div>
-    </nav>`,
+    </nav>
+</template>
+
+<script>
+import { mapState } from 'pinia';
+import cartStore from '../stores/cartStore.js';
+export default {
   computed: {
     ...mapState(cartStore, ['cart']),
   },
 };
+</script>
